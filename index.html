@@ -1,0 +1,172 @@
+<!--Name - Ish Jain-->
+<!doctype html>
+<html lang="en">
+
+<head>
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="apple-touch-icon" sizes="180x180" href="statics/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="statics/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="statics/favicon-16x16.png">
+    <link rel="manifest" href="statics/site.webmanifest">
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <title>Welcome to Sparks Bank</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <style>
+        #lock{
+            display:none;
+            position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 20;
+    background: rgb(255,255,255) center no-repeat;
+    text-align:center;
+        }
+        @media screen and (orientation:landscape) {
+            #lock{display:none;}
+            #container{display:block;}
+        }
+
+        @media screen and (orientation:portrait) {
+            #lock{display:block;}
+            #container{display:none;}
+        }
+        body {
+background-image: url('https://wallpaperboat.com/wp-content/uploads/2021/04/15/75170/finance-15.jpg');
+background-repeat: no-repeat, repeat;
+background-color: #cccccc;
+}
+    </style>
+</head>
+
+<body>
+
+<div id="lock"><img src="https://wallpaperaccess.com/full/2311972.jpg" alt="" style="width:50%; margin-top:50%;"><br>
+<h1 style="color:black; margin-top: 25px;"><b>Please rotate the device. </b><br>We support only landscape mode.</h1>
+</div>
+
+<div id="container">
+
+    <?php include 'database.php'; ?>
+
+
+    <style>
+        .nav-link:hover {
+            text-decoration: underline;
+        }
+
+        .mybtn {
+            margin-bottom: 10px;
+            box-shadow: 2px 2px 10px black;
+            border-radius: 30px;
+            background-color: yellowgreen;
+            font-weight: bold;
+            color: black;
+        }
+
+        .mybtn:active {
+            background-color: black;
+            color: white;
+        }
+    </style>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-danger fixed fixed-top"
+        style="font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size:18px; box-shadow: 0px 0px 15px 0px black;">
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <b>
+                <ul class="navbar-nav ">
+                    <li class="nav-item nav-links" style="margin-left:15px;">
+                        <a class="nav-link active text-nowrap" aria-current="page" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item" style="margin-left:15px;">
+                        <a class="nav-link text-nowrap" href="customerdetails.php">View Customer Details</a>
+                    </li>
+                    
+                    <li class="nav-item" style="margin-left:15px; ">
+                        <a class="nav-link text-nowrap" href="sendmoney.php">Transfer Money</a>
+                    </li>
+                    <li class="nav-item" style="margin-left:15px;">
+                        <a class="nav-link text-nowrap" href="transactionhistory.php">Transaction History</a>
+                    </li>
+                </ul>
+            </b>
+        </div>
+    </nav>
+
+
+
+    <div class="container-large"
+        style="color:yellow; height:500px; width: 100%; padding:5%; ">
+        <div class="row">
+        <div  style="margin:2% 0.0% 0.0%; text-align:center;">
+                &nbsp;<img src="https://www.f6s.com/content-resource/profiles/2324036_original.jpg" class='zoomin' alt="" style="width:0px;">
+            </div>
+            <div >
+                <br><br>&nbsp;<p class="zoomfont"
+                    style="font-size:0px; text-shadow:3px 3px 3px green; text-align:center; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;"><b>Welcome to Spark
+                        Bank</b></p>
+            </div>
+
+        </div>
+    </div>
+    <center style="margin:60px 0px 20px 0px;">
+        <div class="container"
+            >
+            <div class="container" style="margin:30px 0px 20px 0px;">
+                <div class="row">
+                    <div class="col-lg">
+                        <div
+                            style="background-color:#343a40; color:white; width: 90%; border-radius:30px; padding:20px 10px 20px 10px;">
+                            <i class='fas fa-address-card'style='font-size:115px;color:yellowgreen;'></i><br><br>
+                            <a href="customerdetails.php"><button type="button" class="btn btn-outline-light mybtn">
+                                    Customer Details</button></a><br>
+
+                        </div>
+                    </div>
+                    <div class="col-lg">
+                        <div
+                            style="background-color:#343a40; color:white; width: 90%; border-radius:30px; padding:20px 10px 20px 10px;">
+                            <i class="fas fa-comments-dollar fa-7x" style="color:yellowgreen;"></i><br><br>
+                            <a href="sendmoney.php"><button type="button" class="btn btn-outline-light mybtn">Transfer
+                                    Money</button></a><br>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </center>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+    </script>
+    <script>
+        
+        $(document).ready(function () {
+
+            $(".zoomin").animate({
+                width: '400px'
+            }, '5000', 'linear');
+            $(".zoomfont").animate({
+                fontSize: '71px'
+            }, '5000', 'linear');
+        });
+    </script>
+
+</div>
+</body>
+
+</html>
